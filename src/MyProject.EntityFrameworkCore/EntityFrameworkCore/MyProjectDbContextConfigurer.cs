@@ -9,7 +9,7 @@ namespace MyProject.EntityFrameworkCore
         {
             builder.UseSqlServer(connectionString, b => b.UseRowNumberForPaging());
         }
-
+        
         public static void Configure(DbContextOptionsBuilder<MyProjectDbContext> builder, DbConnection connection)
         {
             builder.UseSqlServer(connection, b => b.UseRowNumberForPaging());
