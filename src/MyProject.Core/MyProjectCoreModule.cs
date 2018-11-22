@@ -26,7 +26,7 @@ namespace MyProject
 
             MyProjectLocalizationConfigurer.Configure(Configuration.Localization);
 
-            // Enable this line to create a multi-tenant application.
+            // Enable this line to create a multi-tenant application.启用此行以创建多租户应用程序。
             Configuration.MultiTenancy.IsEnabled = MyProjectConsts.MultiTenancyEnabled;
 
             // Configure roles

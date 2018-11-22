@@ -4,7 +4,7 @@
 @using MyProject
 @using MyProject.Web.Resources
 @inject MyProject.Timing.AppTimes AppTimes
-@inject IAbpAntiForgeryManager AbpAntiForgeryManager
+@inject IAbpAntiForgeryManager AbpAntiForgeryManager  
 @inject IMultiTenancyConfig MultiTenancyConfig
 @inject IWebResourceManager WebResourceManager
 @{
@@ -58,7 +58,7 @@
         <div class="logo">
             <a href="javascript:void(0);">MyProject</a>
         </div>
-
+        @*这里是判断是否启用多租户*@
         @if (MultiTenancyConfig.IsEnabled)
         {
             <div class="tenant-change-box">

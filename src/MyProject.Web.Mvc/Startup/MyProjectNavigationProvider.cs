@@ -1,4 +1,5 @@
-﻿using Abp.Application.Navigation;
+﻿using System.Security.Policy;
+using Abp.Application.Navigation;
 using Abp.Localization;
 using MyProject.Authorization;
 
@@ -44,7 +45,12 @@ namespace MyProject.Web.Startup
                         icon: "local_offer",
                         requiredPermissionName: PermissionNames.Pages_Roles
                     )
-                )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Person,
+                        L("Person"),
+                        url:"Persons",
+                        icon: "local_offer"))
                 .AddItem(
                     new MenuItemDefinition(
                         PageNames.About,

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyProject.EntityFrameworkCore;
 
 namespace MyProject.Migrations
 {
     [DbContext(typeof(MyProjectDbContext))]
-    partial class MyProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181122142415_Add_NewPersonAndNumberEntity")]
+    partial class Add_NewPersonAndNumberEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1090,7 +1092,7 @@ namespace MyProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person","PB");
+                    b.ToTable("Persons","PB");
                 });
 
             modelBuilder.Entity("MyProject.PhoneBooks.PhoneNumbers.PhoneNumber", b =>
